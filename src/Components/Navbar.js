@@ -26,7 +26,7 @@ function Navbar() {
     }
   ]
   function closeSidebar(){
-    setShowsidebar(false)
+    setShowsidebar(!showSidebar)
   }
   return (
     <>
@@ -40,14 +40,14 @@ function Navbar() {
       ))}
        
      </div>
-     <div href onClick ={()=>setShowsidebar(true)} className={showSidebar ? "sidebar-button active":"sidebar-button"}>
+     <div href onClick ={()=>closeSidebar()} className={showSidebar ? "sidebar-button active":"sidebar-button"}>
       <div className='bar'></div>
       <div className='bar'></div>
       <div className='bar'></div>
      </div>
     </div>
     {showSidebar && <Sidebar closeSidebar={closeSidebar} links={links}/> }
-    <Sidebar links={links}/>
+   
     </>
     
   )
