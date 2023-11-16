@@ -1,3 +1,4 @@
+import {Link, useLocation} from "react-router-dom";
 
 import { useState  } from 'react'
 
@@ -5,7 +6,8 @@ import Sidebar from './Sidebar'
 import {faHome, faList, faCog} from "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
-  const [showSidebar, setShowsidebar] = useState(true)
+  const [showSidebar, setShowsidebar] = useState(false)
+  const location = useLocation()
   const links = [
     {
       name: "Home",
@@ -36,11 +38,11 @@ function Navbar() {
        </a>
      <div className='nav-links'>
       {links.map(link => (
-        <a href="#!" key={link.name}>{link.name}</a>
+        <Link className= {location.pathname === link.path ?  "active" : "" } to={link.path} key={link.name}>{link.name}/</Link>
       ))}
        
      </div>
-     <div href onClick ={()=>closeSidebar()} className={showSidebar ? "sidebar-button active":"sidebar-button"}>
+     <div onClick ={()=>closeSidebar()} className={showSidebar ? "sidebar-button active":"sidebar-button"}>
       <div className='bar'></div>
       <div className='bar'></div>
       <div className='bar'></div>

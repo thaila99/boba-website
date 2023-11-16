@@ -1,3 +1,4 @@
+
 export default function BeMember(){
     const list = [
         "  Earn Points When You Purchase Items",
