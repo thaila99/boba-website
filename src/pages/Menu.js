@@ -1,25 +1,55 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import PreviousSearch from "../Components/PreviousSearch"
+import MenuCard from "../Components/MenuCard"
 
 
 function Menu() {
-    const searches= ['boba','milktea', 'sweets', 'ice cream', 'snacks', 'crepes']
-  return (
-    <div className='previous-searches'>
-     <h2>Previous Searches</h2>
-     <div className='previous-searches-container'>
-        {searches.map ((search,index) => (<div key={index} style={{animationDelay: index*.2+
-        "s"}} className='search-item'>
-            {search}
-        </div>) )}
+    const menu = [
+      {title: "Black Oolong Tea",
+       image: "/img/gallery/img1.jpg",
+       authorImg: "/img/top-chefs/img1.jpg",
+      },
 
-     </div>
-     <div className='search-box'>
-        <input type="text" placeholder=' Search for your order...'/>
-        <button className='btn'>
-            <FontAwesomeIcon icon={faSearch}/>
-        </button>
-     </div>
+      {title: "Strawberry MilkTea",
+       image: "/img/gallery/img2.jpg",
+       authorImg: "/img/top-chefs/img2.jpg",
+      },
+
+      {title: "Butterfly flower MilkTea",
+       image: "/img/gallery/img3.jpg",
+       authorImg: "/img/top-chefs/img4.jpg",
+      },
+
+      {title: "Matcha MilkTea",
+       image: "/img/gallery/img4.jpg",
+       authorImg: "/img/top-chefs/img5.jpg",
+      },
+
+      {title: "Brown Sugar MilkTea",
+       image: "/img/gallery/img5.jpg",
+       authorImg: "/img/top-chefs/img6.jpg"
+      },
+
+      {title: "Ube MilkTea",
+       image: "/img/gallery/img6.jpg",
+       authorImg: "/img/top-chefs/img4.jpg"
+      },
+
+
+
+
+    ].sort(()=> Math.random() -0.5)
+
+
+  return (
+    <div>
+<PreviousSearch/>
+<div className="menu-container">
+{/*<MenuCard/>*/}
+{menu.map((menu, index)=>(
+  <MenuCard key={index} menu={menu}/>))}
+
+
+</div>
     </div>
   )
 }
