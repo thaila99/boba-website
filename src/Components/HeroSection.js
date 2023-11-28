@@ -19,7 +19,7 @@ function HeroSection() {
       <div className="col typography">
         <h1 className="title">A Little About Ourselves</h1>
         <p className="info">Yummy Cha was founded in 2021. We proudly bring you the best F&B services that are guaranteed in quality with reasonable and affordable prices. So start exploring now.</p>
-        <button className="button">Explore Now</button>
+        <button className="btn">Explore Now</button>
       </div>
       <div className="col gallery">
         {images.map((src, index)=> (

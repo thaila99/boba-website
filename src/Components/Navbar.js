@@ -33,13 +33,12 @@ function Navbar() {
   return (
     <>
     <div className='navbar container'>
-     <a href="#!" className='logo'>
-     Y<span>UMMY</span> C<span>HA</span> 
-       </a>
+     <Link to="/" className='logo'>
+     Y<span>UMMY</span> C<span>HA</span> </Link>
      <div className='nav-links'>
       {links.map(link => (
         <Link className= {location.pathname === link.path ?  "active" : "" } to={link.path} key={link.name}>{link.name}/</Link>
-      ))}
+      )) }
        
      </div>
      <div onClick ={()=>closeSidebar()} className={showSidebar ? "sidebar-button active":"sidebar-button"}>

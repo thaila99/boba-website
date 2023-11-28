@@ -19,7 +19,7 @@ export default function BeMember(){
           {list.map((item, index)=> (
             <p className="member-item" key={index}>{item}</p>
           )) }
-          <button className="button">Join Us Now</button>
+          <button className="btn">Join Us Now</button>
         </div>
          
       </div>

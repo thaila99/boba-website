@@ -4,8 +4,8 @@
    }
    .top-chef-container{
        display:grid;
-       grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
-       grid-gap: 1.4em;
+       grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+       grid-gap: 1.5em;
        margin-top: 3em;
    }
    .chef-card{
@@ -42,7 +42,7 @@
            .chef-icons {
                font-size: 1.2em;
                svg{
-                   margin-right:.6em;
+                   margin-right:.5em;
                    &:nth-child(1){
                        color:#0063f7;
                    }
